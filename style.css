@@ -1,0 +1,101 @@
+/* Scroll snap for smooth section transitions */
+html, body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+/* Improve scroll indicator visibility */
+#scroll-down {
+  filter: drop-shadow(0 2px 8px #6dd5fa88);
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+#scroll-down:hover, #scroll-down:focus {
+  opacity: 1;
+}
+/* Sticky header with shadow and blur on scroll */
+header.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(24,28,36,0.92);
+  box-shadow: 0 4px 24px #0008;
+  backdrop-filter: blur(8px) saturate(120%);
+  z-index: 50;
+  transition: background 0.3s, box-shadow 0.3s, backdrop-filter 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #181c24;
+}
+body {
+  background: linear-gradient(135deg, #181c24 0%, #232526 100%);
+  min-height: 100vh;
+  color: #e0e6ed;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  transition: background 0.5s, color 0.5s;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #6dd5fa44 0%, #23252600 80%);
+  position: absolute;
+  filter: blur(8px);
+  z-index: 1;
+}
+
+.pattern {
+  background: repeating-linear-gradient(135deg, #232526 0 2px, transparent 2px 40px);
+  opacity: 0.08;
+  z-index: 0;
+}
+
+section, header, footer {
+  z-index: 10;
+}
+
+.bg-white.bg-opacity-10 {
+  background: rgba(36, 41, 46, 0.85) !important;
+  box-shadow: 0 4px 32px #0008;
+  border: 1px solid #232526;
+  backdrop-filter: blur(8px) saturate(120%);
+}
+
+::selection {
+  background: #6dd5fa55;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #232526;
+}
+::-webkit-scrollbar-thumb {
+  background: #6dd5fa88;
+  border-radius: 8px;
+}
+
+/* Smooth fade-in for sections */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

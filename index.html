@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Tailwind CDN (optional) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white font-sans relative overflow-hidden">
+
+  <!-- Background Circles -->
+  <div class="circle top-10 left-10"></div>
+  <div class="circle bottom-10 right-10"></div>
+  <div class="absolute inset-0 pattern"></div>
+
+  <!-- Header -->
+  <header class="text-center p-12 relative z-10">
+    <h1 class="text-5xl font-bold text-cyan-400 drop-shadow-lg">Comillas Negras</h1>
+    <p class="mt-4 text-xl text-gray-300">Web Developer | Frontend Enthusiast | Tech Explorer</p>
+    <nav class="mt-8 flex justify-center gap-8 text-lg">
+      <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+      <a href="#about" class="hover:text-cyan-400 transition">About</a>
+      <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+      <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+    </nav>
+    <!-- Mouse Scroll Down Indicator -->
+    <div id="scroll-down" class="mx-auto mt-12 flex flex-col items-center cursor-pointer animate-bounce" tabindex="0" aria-label="Scroll down">
+      <div style="width:32px;height:54px;border:2px solid #6dd5fa;border-radius:20px;position:relative;box-sizing:border-box;display:flex;align-items:flex-start;justify-content:center;background:rgba(36,41,46,0.2);">
+        <div style="width:6px;height:12px;background:#6dd5fa;border-radius:3px;margin-top:8px;transition:all 0.3s;"></div>
+      </div>
+      <span class="mt-2 text-cyan-300 text-xs tracking-widest">SCROLL</span>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="text-center px-6 md:px-20 py-10 relative z-10">
+    <img src="https://via.placeholder.com/150" alt="Your Photo" class="rounded-full mx-auto border-4 border-cyan-400 shadow-xl" />
+    <h2 class="text-3xl font-semibold mt-6 text-cyan-300">Welcome to My Portfolio</h2>
+    <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-300">
+      I craft beautiful, responsive, and functional websites using modern technologies like HTML, CSS, JavaScript, and frameworks like React.
+    </p>
+    <a href="#projects" class="inline-block mt-8 px-8 py-3 bg-cyan-500 text-white rounded-full shadow-lg hover:bg-cyan-400 transition">See My Work</a>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="bg-white bg-opacity-10 rounded-2xl p-8 m-8 shadow-lg max-w-4xl mx-auto relative z-10">
+    <h2 class="text-2xl font-bold mb-4 text-cyan-300">About Me</h2>
+    <p class="text-gray-300">
+      I'm a passionate web developer with a strong foundation in front-end development and UI/UX design.<br>
+      I hold a degree in Computer Science and have experience working on multiple freelance and personal projects.
+    </p>
+    <ul class="list-disc mt-4 ml-6 text-left text-gray-200">
+      <li><strong>Education:</strong> B.Tech in Computer Science</li>
+      <li><strong>Experience:</strong> 2 years in freelance web development</li>
+      <li><strong>Skills:</strong> HTML, CSS, JavaScript, React, Tailwind CSS</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-white bg-opacity-10 rounded-2xl p-8 m-8 shadow-lg max-w-4xl mx-auto relative z-10">
+    <h2 class="text-2xl font-bold mb-4 text-cyan-300">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-[#232526] rounded-xl p-6 shadow-md border border-cyan-900">
+        <h3 class="text-xl font-semibold text-cyan-200 mb-2">Portfolio Website</h3>
+        <p class="text-gray-300 mb-2">A personal portfolio built with HTML, CSS, and Tailwind CSS.</p>
+        <a href="#" class="text-cyan-400 hover:underline">View Project</a>
+      </div>
+      <div class="bg-[#232526] rounded-xl p-6 shadow-md border border-cyan-900">
+        <h3 class="text-xl font-semibold text-cyan-200 mb-2">Tic-Tac-Toe Game</h3>
+        <p class="text-gray-300 mb-2">A fun tic-tac-toe game using JavaScript and modern CSS.</p>
+        <a href="#" class="text-cyan-400 hover:underline">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white bg-opacity-10 rounded-2xl p-8 m-8 shadow-lg max-w-4xl mx-auto relative z-10">
+    <h2 class="text-2xl font-bold mb-4 text-cyan-300">Contact</h2>
+    <form class="flex flex-col gap-4 max-w-md mx-auto">
+      <input type="text" placeholder="Your Name" class="p-3 rounded bg-[#232526] text-white border border-cyan-900 focus:outline-none focus:ring-2 focus:ring-cyan-400" required>
+      <input type="email" placeholder="Your Email" class="p-3 rounded bg-[#232526] text-white border border-cyan-900 focus:outline-none focus:ring-2 focus:ring-cyan-400" required>
+      <textarea placeholder="Your Message" class="p-3 rounded bg-[#232526] text-white border border-cyan-900 focus:outline-none focus:ring-2 focus:ring-cyan-400" rows="4" required></textarea>
+      <button type="submit" class="mt-2 px-6 py-3 bg-cyan-500 text-white rounded-full shadow-lg hover:bg-cyan-400 transition">Send Message</button>
+    </form>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="text-center mt-10 mb-4 text-sm relative z-10 text-gray-400">
+    © 2025 Comillas Negras. All rights reserved.
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+  <script src="extrajs.js"></script>
+</body>
+</html>
